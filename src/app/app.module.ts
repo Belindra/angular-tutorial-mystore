@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CartService } from './cart.service';
@@ -13,6 +14,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ShippingComponent } from './shipping/shipping.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { BackbtnComponent } from './backbtn/backbtn.component';
+import { BackButtonDirective } from './back-button.directive';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { ProductListComponent } from './product-list/product-list.component';
     ProductDetailsComponent,
     ShippingComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    BackbtnComponent,
+    BackButtonDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
