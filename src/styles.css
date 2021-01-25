@@ -13,10 +13,11 @@
     margin: 0;
   }
   
-  .container {
+  /* .container {
     display: flex;
     flex-direction: row;
-  }
+    border-style: 1px solid black;
+  } */
   
   router-outlet + *  {
     padding: 0 16px;

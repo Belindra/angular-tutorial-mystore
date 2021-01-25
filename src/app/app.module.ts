@@ -16,6 +16,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { BackbtnComponent } from './backbtn/backbtn.component';
 import { BackButtonDirective } from './back-button.directive';
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BackButtonDirective } from './back-button.directive';
     TopBarComponent,
     ProductListComponent,
     BackbtnComponent,
-    BackButtonDirective
+    BackButtonDirective,
+    BottomBarComponent
   ],
   imports: [
     BrowserModule,
