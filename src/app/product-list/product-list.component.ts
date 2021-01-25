@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 import { products } from '../products';
+import { faFacebookF, faTwitterSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-product-list',
@@ -8,8 +10,14 @@ import { products } from '../products';
 })
 export class ProductListComponent implements OnInit {
   products = products;
+  items;
+  product;
 
-  constructor() { }
+  faFacebookF = faFacebookF;
+  faTwitterSquare = faTwitterSquare;
+  faInstagram = faInstagram;
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +28,11 @@ export class ProductListComponent implements OnInit {
 
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+
+  addToCart(product) {
+    window.alert('Your product has been added to the cart!');
+    this.cartService.addToCart(product);
   }
 
 }
