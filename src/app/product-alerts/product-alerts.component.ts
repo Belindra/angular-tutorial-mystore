@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { faSms } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product-alerts',
@@ -6,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./product-alerts.component.css']
 })
 export class ProductAlertsComponent implements OnInit {
+  faSms = faSms;
   @Input() product;
   @Output() notify = new EventEmitter();
 
