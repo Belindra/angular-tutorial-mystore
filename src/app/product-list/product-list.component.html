@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <img src="./assets/iso-iphone-xs.jpg" class="img-fluid" />
 </div>
@@ -11,14 +12,14 @@
       <img [src]="product.imgUrl" class="img-fluid p-5" />
     </div>
 
-    <h4 class="pl-2">
+    <h6 class="pl-2">
       <a
         [title]="product.name + ' details'"
         [routerLink]="['/products', productId]"
       >
         {{ product.name }}
       </a>
-    </h4>
+    </h6>
     <p class="price" style="margin-top: 20px;">{{ product.price | currency }}</p>
 
     <div class="pl-2">
